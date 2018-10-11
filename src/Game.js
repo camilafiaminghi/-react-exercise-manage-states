@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Question from './Question';
+import Score from './Score';
 
 class Game extends Component {
   constructor(props) {
@@ -23,12 +24,10 @@ class Game extends Component {
     return (
       <div className="game">
         <h2>{this.props.name}</h2>
-    	<Question 
-    		updateScore={this.updateScore}/>
-        <p className="text">
-          Your Score: {this.state.numCorrect}/{this.state.numQuestions} <br />
-          Correct Answers: {this.state.numCorrect}
-        </p>
+    	<Question updateScore={this.updateScore}/>
+		<Score 
+			numCorrect={this.state.numCorrect}
+			numQuestions={this.state.numQuestions}/>
       </div>
     );
   }

@@ -15,8 +15,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
-        <Game 
-    		name="Mental Math"/>
+        <Game name="Mental Math"/>
       </div>
     );
   }
